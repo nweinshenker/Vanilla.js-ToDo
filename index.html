@@ -1,8 +1,44 @@
-<doctype html5>
+<!DOCTYPE html>
+<html>
   <head>
-
+    <title>Vanilla ToDo</title>
+    <script></script>
   </head>
   <body>
-    
+    <section class="todoapp">
+        <header class="header">
+          <h1>ToDos</h1>
+          <input class="new-todo" placeholder="What needs to be done?">
+        </header>
+        <section class="main">
+            <input class="toggle-all" type="checkbox">
+            <label for="toggle-all">Mark all as complete</label>
+            <ul class="todo-list"></ul>
+        </section>
+          <section class="footer">
+            <span class="todo-count"></span>
+            <ul class="filters">
+              <li>
+                <button id='addButton' onclick="addItem()">Add Note</button>
+              </li>
+              <li>
+                <button id='deleteButton' onclick="deleteItem()">Delete Note</button>
+              </li>
+              <li>
+                <button id='addButton' onclick="editItem()">Edit Note</button>
+              </li>
+            </ul>
+          <button class="clear-completed">Clear completed</button>
+        </section>
+      <footer>
+        <p>Created by Nathan Weinshenker 2018</p>
+        <a href="https://www.linkedin.com/in/nathan-weinshenker-2357a8143/">Github</a>
+        <a href="https://www.linkedin.com/in/nathan-weinshenker-2357a8143/">Linkedin</a>
+      </footer>
+
+</section>
+
+
   </body>
-</doctype>
+  <script src='js\main.js'></script>
+</html>
