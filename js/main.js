@@ -17,13 +17,7 @@ var addItem = function addItem() {
   if (text) createCard(text);
 };
 
-window.onload = function () {
-
-  createItem('First item');
-
-};
-
-let deleteItem = (event) => {
+var deleteItem = (event) => {
   var goingToDelete = false;
 
   var itemContainer.removeChild()
@@ -44,3 +38,9 @@ let deleteItem = (event) => {
     }
   }
 }
+
+window.onload = function () {
+
+  createItem('First item');
+
+};
