@@ -1,20 +1,20 @@
-function addCard(text) {
+/*
+ Attempted to add an element
+ Will finish another time
+ */
+
+function addItem(text) {
 	return function () {
-    let item = document.createElement('div');
-    let content = document.createElement('h2');
-    let button = document.createElement('button');
+		var titleTextarea = list.titleFormNode
+			.getElementsByClassName('trello-new-card-title-input')[0]
+		list.titleFormNode.getElementsByClassName('trello-new-card-title-submit')[0]
+			.onclick = titleSubmit
+		list.titleFormNode.style.display = 'block';
+		titleTextarea.focus();
 
-    button.innerHTML = 'X';
-    button.style.fontSize = '10px';
-    button.className = 'itemButton';
-    button.addEventListener('click',removeItem);
+		function titleSubmit(evt) {
+			evt.preventDefault()
+			var title = titleTextarea.value.trim()
 
-    content.innerHTML = text;
-    item.appendChild(content);
-    item.appendChild(button);
-    item.className = 'todoItem';
-    document.getElementById('todoContainer').appendChild(item);
-
-    item.addEventListener('click', checkDelete);
-  }
+	}
 }

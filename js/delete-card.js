@@ -1,12 +1,21 @@
-let deleteItem = (card) => {
-  let cards = document.getElementsByTagName('div');
+let deleteItem = (event) => {
+  var goingToDelete = false;
+
+  var itemContainer.removeChild()
+  let cards = document.getElementsByClassName('todoItem');
+
   for (var i = cards.length - 1; i >= 0; i--) {
-    if (card.exists()) {
-      document.innerHTML = 'X'
-      document.innerText = 'delete'
+    if (goingToDelete == false) {
+      for (var i = 0; i < cards.length; i++ )
+        todoItems[i].className = 'todoItem inDeleteMode';
+      }
     }
     else {
-        continue;
+      for (var i = cards.length - 1; i >= 0; i--) {
+        goingToDelete = true;
+        cards[i].remove();
+        document.activeElement.blur();
+      }
     }
   }
 }
